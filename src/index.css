@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* containers */
+    .container-main {
+        @apply px-5 py-4;
+    }
+
+    /* Buttons */
+    .btn__primary {
+        @apply bg-color-secondary cursor-pointer transition hover:-translate-y-1 hover:bg-opacity-80 font-display rounded-sm text-white shadow-md px-6 py-2 mx-auto;
+    }
+
+    .btn__danger {
+        @apply bg-color-danger cursor-pointer transition hover:-translate-y-1 hover:bg-opacity-80 font-display rounded-sm text-white shadow-md px-6 py-2 mx-auto;
+    }
+
+    /* Form components */
+    .input__primary {
+        @apply bg-white rounded-md p-2 border shadow text-color-dark focus:outline-color-primary;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #C6F8FF, #28C7FA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
