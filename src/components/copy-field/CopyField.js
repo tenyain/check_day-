@@ -38,17 +38,17 @@ const CopyField = (props) => {
                                 </span>
                                 <br />
                                 <span>
-                                    ___ _ ___ _ ___ _ ___ _ ___ _ ___
+                                    _____________________________________
                                 </span>
                                 <br />
                                 <br />
                                 <span>
-                                    {userName}
+                                    *{userName}*
                                 </span>
                                 <br />
                                 <br />
                                 <span>
-                                    Check {checkState ? 'In' : 'Out'}:
+                                &#123;code&#125;Check {checkState ? 'In' : 'Out'}:&#123;code&#125;
                                 </span>
                             </p>
                         </div>

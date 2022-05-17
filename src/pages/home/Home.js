@@ -10,7 +10,7 @@ const Home = (props) => {
     return (
         <>
             <AnimatePage>
-                <div className='pt-16'>
+                <div className='pt-16 w-full lg:w-2/6 lg:mx-auto'>
                     <DateTime
                         currentDateTime={currentDateTime}
                     />
