@@ -6,6 +6,7 @@ const CopyField = (props) => {
 
     const { currentDateTime, checkState } = props;
     const { userName } = useSelector(state => state.profileForm);
+    const { itemList } = useSelector(state => state.checkInForm);
     const [copyText, setCopyText] = useState(null);
     const [copyState, setCopyState] = useState(false);
 
@@ -48,8 +49,21 @@ const CopyField = (props) => {
                                 <br />
                                 <br />
                                 <span>
-                                &#123;code&#125;Check {checkState ? 'In' : 'Out'}:&#123;code&#125;
+                                    &#123;code&#125;Check {checkState ? 'In' : 'Out'}:&#123;code&#125;
                                 </span>
+                                <br/>
+                                <div>
+                                    {
+                                        itemList.length > 0 &&
+                                        itemList.map((item, index) => {
+                                            return (
+                                                <span key={index} className="flex">
+                                                    {index+1}) {item}
+                                                </span>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </p>
                         </div>
                     </section>
